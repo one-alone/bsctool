@@ -2,14 +2,30 @@
     "name": "bscmain/bsc-php",
     "description": "Binance Chain operation",
     "type": "1",
+	"homepage": "https://github.com/one-alone/bsctool.git",
     "require": {
         "sc0vu/web3.php": "dev-master",
         "web3p/ethereum-tx": "dev-master",
         "guzzlehttp/guzzle": "^6.3"
     },
+	"license": "MIT",
+	 "authors": [
+        {
+            "name": "mr quan",
+            "email": "903838379@qq.com"
+        }
+    ],
+	 "require-dev": {
+        "phpunit/phpunit": "~6.3"
+    },
     "autoload": {
         "psr-4": {
             "bsctool\\": "bscphp/src/"
+        }
+    },
+	"extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
         }
     },
     "minimum-stability": "dev"

@@ -1,0 +1,16 @@
+{
+    "name": "bscmain/bsc-php",
+    "description": "Binance Chain operation",
+    "type": "1",
+    "require": {
+        "sc0vu/web3.php": "dev-master",
+        "web3p/ethereum-tx": "dev-master",
+        "guzzlehttp/guzzle": "^6.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "bsctool\\": "bscphp/src/"
+        }
+    },
+    "minimum-stability": "dev"
+}

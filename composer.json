@@ -5,7 +5,7 @@
 	"homepage": "https://github.com/one-alone/bsctool.git",
     "require": {
         "sc0vu/web3.php": "dev-master",
-        "web3p/ethereum-tx": "dev-master",
+        "web3p/ethereum-tx": "^0.1.4",
         "guzzlehttp/guzzle": "^6.3"
     },
 	"license": "MIT",

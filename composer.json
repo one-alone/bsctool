@@ -6,7 +6,7 @@
     "require": {
         "sc0vu/web3.php": "^0.1.4",
         "web3p/ethereum-tx": "^0.4.2",
-        "guzzlehttp/guzzle": "^6.3"
+        "guzzlehttp/guzzle": "^7.4"
     },
 	"license": "MIT",
 	 "authors": [

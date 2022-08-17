@@ -31,7 +31,40 @@ class NodeClient extends Web3
 
     static function mainNet()
     {
-        return new self('https://bsc-dataseed.binance.org/');
+        /**
+         * 推荐
+
+        https://bsc-dataseed.binance.org/
+        https://bsc-dataseed1.defibit.io/
+        https://bsc-dataseed1.ninicoin.io/
+        备份
+
+        https://bsc-dataseed2.defibit.io/
+        https://bsc-dataseed3.defibit.io/
+        https://bsc-dataseed4.defibit.io/
+        https://bsc-dataseed2.ninicoin.io/
+        https://bsc-dataseed3.ninicoin.io/
+        https://bsc-dataseed4.ninicoin.io/
+        https://bsc-dataseed1.binance.org/
+        https://bsc-dataseed2.binance.org/
+        https://bsc-dataseed3.binance.org/
+        https://bsc-dataseed4.binance.org/
+         * BC RPC 端点：
+
+        https://dataseed1.binance.org/
+        https://dataseed2.binance.org/
+        https://dataseed3.binance.org/
+        https://dataseed4.binance.org/
+        https://dataseed1.defibit.io/
+        https://dataseed2.defibit.io/
+        https://dataseed3.defibit.io/
+        https://dataseed4.defibit.io/
+        https://dataseed1.ninicoin.io/
+        https://dataseed2.ninicoin.io/
+        https://dataseed3.ninicoin.io/
+        https://dataseed4.ninicoin.io/
+         */
+        return new self('https://bsc-dataseed1.ninicoin.io/');
     }
 
     function getBalance($addr)
@@ -67,9 +100,10 @@ class NodeClient extends Web3
                 if (!is_null($receipt)) return $receipt;
                 sleep(2);
             } catch (Exception $e) {
+
             }
         }
-        throw new Exception('tx not confirmed yet.');
+        return false;
     }
 
     function getBlockByNumber()

@@ -96,6 +96,7 @@ class SmartContract extends Contract{
   }
   
   public function __call($name, $args){
+
     if($this->isTxMethod($name)){
       $data = $this->getData($name, ...$args);
       $tx = [

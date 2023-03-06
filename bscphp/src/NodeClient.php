@@ -19,17 +19,28 @@ class NodeClient extends Web3
 
     static function create($network)
     {
-        if ($network === 'mainNet') return self::mainNet();
-        if ($network === 'testNet') return self::testNet();
-        throw new Exception('unsupported network');
+        if ($network === 'mainNet'){
+            return self::mainNet();
+        }
+        else if ($network === 'testNet'){
+            return self::testNet();
+        }
+        else{
+            return self::ownNet($network);
+        }
     }
 
-    static function testNet()
+    static function ownNet($network)
     {
-        return new self('https://data-seed-prebsc-1-s1.binance.org:8545/');
+        return new self($network);
     }
 
-    static function mainNet()
+    static function testNet($url = 'https://data-seed-prebsc-1-s1.binance.org:8545/')
+    {
+        return new self($url);
+    }
+
+    static function mainNet($url = 'https://bsc-dataseed1.ninicoin.io/' )
     {
         /**
          * 推荐
@@ -64,7 +75,7 @@ class NodeClient extends Web3
         https://dataseed3.ninicoin.io/
         https://dataseed4.ninicoin.io/
          */
-        return new self('https://bsc-dataseed1.ninicoin.io/');
+        return new self($url);
     }
 
     function getBalance($addr)

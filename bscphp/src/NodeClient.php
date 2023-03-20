@@ -125,4 +125,17 @@ class NodeClient extends Web3
 
         return $cb->result;
     }
+
+    /**
+     * 调用ETH方法 无参数查询方法
+     * @return void
+     */
+    public function callEthMethod($method)
+    {
+        $cb     = new Callback;
+        $this->getEth()->$method($cb);
+
+        return $cb->result;
+    }
+
 }

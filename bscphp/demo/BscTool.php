@@ -114,6 +114,10 @@ class BscTool
         }
     }
 
+    /**
+     * 根据区块号获取交易
+     * @return void
+     */
     public function getBlockByNumber()
     {
         $tc   = NodeClient::mainNet();
@@ -122,6 +126,16 @@ class BscTool
         echo '<pre>';
         print_r($data);
         die();
+    }
+
+    /**
+     * 调用ETH方法 blockNumber 查询最新区块高度
+     * @return void
+     */
+    public function callEthMethod($method='blockNumber')
+    {
+        $tc   =  NodeClient::create(self::$_net);
+        return $tc->callEthMethod($method);
     }
 
     /**

@@ -117,10 +117,10 @@ class NodeClient extends Web3
         return false;
     }
 
-    function getBlockByNumber()
+    function getBlockByNumber($blockNumber)
     {
         $cb     = new Callback;
-        $number = hex(436);
+        $number = $this->hex($blockNumber);
         $this->getEth()->getBlockByNumber($number, true, $cb);
 
         return $cb->result;
@@ -136,6 +136,16 @@ class NodeClient extends Web3
         $this->getEth()->$method($cb);
 
         return $cb->result;
+    }
+
+    function hex($str, $prefix=true){
+        $bn = gmp_init($str);
+        $ret = gmp_strval($bn, 16);
+        return $prefix ? '0x' . $ret : $ret;
+    }
+
+    function bn($n){
+        return new phpseclib\Math\BigInteger($n);
     }
 
 }

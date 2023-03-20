@@ -118,14 +118,10 @@ class BscTool
      * 根据区块号获取交易
      * @return void
      */
-    public function getBlockByNumber()
+    public function getBlockByNumber($blockNumber)
     {
-        $tc   = NodeClient::mainNet();
-        $data = $tc->getBlockByNumber();
-
-        echo '<pre>';
-        print_r($data);
-        die();
+        $tc   =  NodeClient::create(self::$_net);
+        return $tc->getBlockByNumber($blockNumber);
     }
 
     /**

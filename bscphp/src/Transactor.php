@@ -1,11 +1,13 @@
 <?php
+
 namespace bsctool;
 
 use Exception;
 use Web3\Contract;
 use Web3\Utils;
 
-class Transactor{
+class Transactor
+{
     protected $web3;
 
     //context
@@ -14,58 +16,59 @@ class Transactor{
     protected $value;
     protected $credential;
 
-    public function __construct($web3, $credential){
+    public function __construct ($web3, $credential) {
         $this->web3 = $web3;
         $this->credential = $credential;
     }
 
-    public function setGasPrice($price = null){
+    public function setGasPrice ($price = null) {
         $this->gasPrice = $price;
         return $this;
     }
 
-    public function setGasLimit($limit = null){
+    public function setGasLimit ($limit = null) {
         $this->gasLimit = $limit;
         return $this;
     }
 
-    public function setValue($value = null){
+    public function setValue ($value = null) {
         $this->value = $value;
         return $this;
     }
 
-    public function setCredential($credential){
+    public function setCredential ($credential) {
         $this->credential = $credential;
         return $this;
     }
 
-    protected function netVersion(){
+    protected function netVersion () {
         $cb = new Callback;
         $this->web3->net->version($cb);
         return $cb->result;
     }
 
-    protected function getTransactionCount($address){
+    protected function getTransactionCount ($address) {
         $cb = new Callback;
-        $this->web3->eth->getTransactionCount($address,'pending',$cb);
+        $this->web3->eth->getTransactionCount($address, 'pending', $cb);
         return '0x' . $cb->result->toHex();
     }
 
-    protected function estimateGasPrice(){
+    protected function estimateGasPrice () {
         $cb = new Callback;
         $this->web3->eth->gasPrice($cb);
         return '0x' . $cb->result->toHex();
     }
 
-    protected function estimateGasUsage($tx){
+    protected function estimateGasUsage ($tx) {
         //var_dump($tx);
         $cb = new Callback;
+        // var_dump($this->web3->eth);
         $this->web3->eth->estimateGas($tx, $cb);
         return '0x' . $cb->result->toHex();
     }
 
-    public function transact($tx): string{
-        if(!isset($this->credential)){
+    public function transact ($tx): string {
+        if (!isset($this->credential)) {
             throw new Exception('credential not set');
         }
 
@@ -73,43 +76,42 @@ class Transactor{
 
         $tx['from'] = $from;
 
-        if(!isset($tx['nonce'])) {
+        if (!isset($tx['nonce'])) {
             $tx['nonce'] = $this->getTransactionCount($from);
         }
-
-        // if(!isset($tx['chainId'])){
-        //   $tx['chainId'] =  $this->netVersion();
-        // }
-
-        if(!isset($tx['value'])) {
-            if(isset($this->value)){
+        if (!isset($tx['chainId'])) {
+            $chainId = $tx['chainId'] = $this->netVersion();
+        }
+        if (!isset($tx['value'])) {
+            if (isset($this->value)) {
                 $tx['value'] = $this->value;
-            } else{
+            } else {
                 $tx['value'] = '0x0';
             }
         }
 
-        if(!isset($tx['gasPrice'])){
-            if(isset($this->gasPrice)){
+        if (!isset($tx['gasPrice'])) {
+            if (isset($this->gasPrice)) {
                 $tx['gasPrice'] = $this->gasPrice;
             } else {
                 $tx['gasPrice'] = $this->estimateGasPrice();
             }
         }
 
-        if(!isset($tx['gasLimit'])){
-            if(isset($this->gasLimit)){
+        if (!isset($tx['gasLimit'])) {
+            if (isset($this->gasLimit)) {
                 $tx['gasLimit'] = $this->gasLimit;
-            } else{
-                $tx['chainId'] =  Utils::toHex($this->netVersion(),1);
+            } else {
+                $tx['chainId'] = Utils::toHex($tx['chainId'], 1);
                 $tx['gasLimit'] = $this->estimateGasUsage($tx);
             }
         }
-        $tx['chainId'] =  $this->netVersion();
+        $tx['chainId'] = $chainId;
         $stx = $this->credential->signTransaction($tx);
 
         $cb = new Callback;
-        $this->web3->eth->sendRawTransaction($stx,$cb);
+
+        $this->web3->eth->sendRawTransaction($stx, $cb);
 
         return $cb->result;
     }

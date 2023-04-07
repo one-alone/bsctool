@@ -128,7 +128,8 @@ class NodeClient extends Web3
 
     /**
      * 调用ETH方法 无参数查询方法
-     * @return void
+     * @param $method
+     * @return mixed
      */
     public function callEthMethod($method)
     {

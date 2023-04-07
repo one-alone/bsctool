@@ -126,12 +126,15 @@ class BscTool
 
     /**
      * 调用ETH方法 blockNumber 查询最新区块高度
-     * @return void
+     * @param $method
+     * @return string
      */
-    public function callEthMethod($method='blockNumber')
+    public static function callEthMethod($method='blockNumber')
     {
         $tc   =  NodeClient::create(self::$_net);
-        return $tc->callEthMethod($method);
+        $res = $tc->callEthMethod($method);
+        return gmp_strval(Utils::toBn($res)->value);
+
     }
 
     /**

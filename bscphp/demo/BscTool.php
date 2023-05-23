@@ -114,6 +114,34 @@ class BscTool
         }
     }
 
+    public function transfer721($alice_sk, $recipient, $num, $tokenAddr = '')
+    {
+        if(!$alice_sk){
+            return ['code' => 1,'msg'=>'密钥缺失'];
+        }
+        try {
+            $kit = new Kit(
+                NodeClient::mainNet(),
+                Credential::fromKey($alice_sk)
+            );
+            if ($tokenAddr) {
+                $kit = $kit->bep721($tokenAddr);
+            }
+
+            $txid = $kit->transfer(
+                $recipient,
+                $this->hex($num)
+            );
+            return ['code' => 0,'msg'=>$txid];
+        } catch (Exception $e) {
+
+            if($e->getMessage() == 'invalid argument 0: json: cannot unmarshal hex string without 0x prefix into Go struct field TransactionArgs.chainId of type *hexutil.Big'){
+                return  $this->transfer($alice_sk, $recipient, $num, $tokenAddr);
+            }
+            return ['code' => 1,'msg'=>$e->getMessage()];
+        }
+    }
+
     /**
      * 根据区块号获取交易
      * @return void

@@ -51,6 +51,9 @@ class Kit{
     function bep20($addr,$abi=null){
         return new Bep20($this->client, $this->credential, $addr,$abi);
     }
+    function bep721($addr,$abi=null){
+        return new Bep721($this->client, $this->credential, $addr,$abi);
+    }
 
 
 }

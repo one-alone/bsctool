@@ -5,11 +5,12 @@ define('ABI_BEP721', '[{"anonymous":false,"inputs":[{"indexed":true,"internalTyp
 define('EVENTSIG_TRANSFER', '0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef');
 
 class Bep721 extends SmartContract{
-    function __construct($client, $credential, $address){
-        parent::__construct($client, $credential, ABI_BEP721);
+
+    function __construct($client, $credential, $address, $abi = null){
+        $abi = $abi ?: ABI_BEP721;
+        parent::__construct($client, $credential, $abi);
         $this->at($address);
     }
-
     function getTransferEvents($from=[], $to=[], $fromBlock='latest', $toBlock='latest'){
         $toTopic = function($addr){
             $addr = preg_replace('/^0x/', '', $addr);

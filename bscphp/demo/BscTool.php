@@ -279,8 +279,9 @@ class BscTool
             $private_key = Task::$private_key;
         }
         try {
+            $web3 = NodeClient::create(self::$_net);
             $kit = new Kit(
-                NodeClient::create(self::$_net),
+                $web3,
                 Credential::fromKey($private_key)
             );
             // var_dump($kit);
@@ -290,6 +291,17 @@ class BscTool
             $abiArr = Nft::$abiArr;
             $inst = $kit->bep20($contractAddress,$abiArr[$type]);
             $re =  $inst->$name(...$arg);
+
+//            $cb = new Callback;
+//            $web3->eth->getTransactionCount($contract['admin_address'], 'pending', $cb);
+//            $nonce = gmp_strval(Utils::toBn($cb->result)->value);
+//            $inst->setGasLimit(200000);
+//            $web3->eth->gasPrice($cb);
+//            $gas = gmp_strval(Utils::toBn($cb->result)->value);
+//            $gas = bcmul($gas,'1.5');
+//            $inst->setGasPrice(intval($gas));
+
+//            return ['res'=>$re,'nonce'=>$nonce];
             return $re;
 
         } catch (Exception $e) {

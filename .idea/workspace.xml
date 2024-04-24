@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba86332a-1d05-4b39-9699-dc93fcb33def" name="变更" comment="" />
+    <list default="true" id="ba86332a-1d05-4b39-9699-dc93fcb33def" name="变更" comment="增加nonce gasprice limit 设置">
+      <change beforePath="$PROJECT_DIR$/.idea/bsctool.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/bsctool.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bscphp/src/SmartContract.php" beforeDir="false" afterPath="$PROJECT_DIR$/bscphp/src/SmartContract.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,6 +39,7 @@
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -46,7 +52,8 @@
       <option name="presentableId" value="Default" />
       <updated>1709863597894</updated>
       <workItem from="1709863599128" duration="5989000" />
-      <workItem from="1711595911685" duration="1562000" />
+      <workItem from="1711595911685" duration="1814000" />
+      <workItem from="1713928719735" duration="65000" />
     </task>
     <task id="LOCAL-00001" summary="增加nonce gasprice limit 设置">
       <created>1711597932442</created>
@@ -55,7 +62,14 @@
       <option name="project" value="LOCAL" />
       <updated>1711597932442</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="增加nonce gasprice limit 设置">
+      <created>1711599264210</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1711599264210</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

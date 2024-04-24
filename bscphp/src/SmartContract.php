@@ -121,6 +121,9 @@ class SmartContract extends Contract
             if (isset($this->nonce) && $this->nonce) {
                 $tx['nonce'] = $this->nonce;
             }
+            if (isset($this->value) && $this->value) {
+                $tx['value'] = $this->value;
+            }
             return $this->transact($tx);
         }
         if ($this->isViewMethod($name)) {

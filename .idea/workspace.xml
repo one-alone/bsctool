@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba86332a-1d05-4b39-9699-dc93fcb33def" name="变更" comment="">
+    <list default="true" id="ba86332a-1d05-4b39-9699-dc93fcb33def" name="变更" comment="变更">
+      <change afterPath="$PROJECT_DIR$/.idea/phpunit.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/bsctool.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/bsctool.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -19,6 +22,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "one-alone"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/one-alone/bsctool.git",
+    "accountId": "704bab2f-97c4-47db-91b5-dcb142abdeac"
+  }
+}]]></component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -35,6 +50,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
     "node.js.detected.package.eslint": "true",
@@ -64,7 +80,7 @@
       <workItem from="1709863599128" duration="5989000" />
       <workItem from="1711595911685" duration="1814000" />
       <workItem from="1713928719735" duration="842000" />
-      <workItem from="1740137005396" duration="42000" />
+      <workItem from="1740137005396" duration="263000" />
     </task>
     <task id="LOCAL-00001" summary="增加nonce gasprice limit 设置">
       <created>1711597932442</created>
@@ -94,7 +110,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713929486283</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="变更">
+      <option name="closed" value="true" />
+      <created>1740137055651</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1740137055651</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -105,6 +129,7 @@
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="增加nonce gasprice limit 设置" />
     <MESSAGE value="增加value 设置" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加value 设置" />
+    <MESSAGE value="变更" />
+    <option name="LAST_COMMIT_MESSAGE" value="变更" />
   </component>
 </project>

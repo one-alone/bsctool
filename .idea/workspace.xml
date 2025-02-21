@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ba86332a-1d05-4b39-9699-dc93fcb33def" name="变更" comment="变更">
-      <change beforePath="$PROJECT_DIR$/.idea/bsctool.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/bsctool.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +33,9 @@
 }</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="PerforceDirect.Settings">
+    <option name="CHARSET" value="无" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="D:\laragon\bin\php\php-8.3.7-nts-Win32-vs16-x64\php.exe" />
   <component name="ProjectColorInfo">{
@@ -80,7 +81,7 @@
       <workItem from="1711595911685" duration="1814000" />
       <workItem from="1713928719735" duration="842000" />
       <workItem from="1740137005396" duration="1061000" />
-      <workItem from="1740138393161" duration="619000" />
+      <workItem from="1740138393161" duration="2067000" />
     </task>
     <task id="LOCAL-00001" summary="增加nonce gasprice limit 设置">
       <created>1711597932442</created>
@@ -134,7 +135,15 @@
       <option name="project" value="LOCAL" />
       <updated>1740137317883</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="变更">
+      <option name="closed" value="true" />
+      <created>1740139017103</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1740139017103</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

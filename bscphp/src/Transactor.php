@@ -50,6 +50,9 @@ class Transactor
     protected function getTransactionCount ($address) {
         $cb = new Callback;
         $this->web3->eth->getTransactionCount($address, 'pending', $cb);
+        if(!$cb->result->toHex()){
+            return '0x0';
+        }
         return '0x' . $cb->result->toHex();
     }
 

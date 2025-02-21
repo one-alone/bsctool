@@ -5,9 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ba86332a-1d05-4b39-9699-dc93fcb33def" name="变更" comment="变更">
-      <change afterPath="$PROJECT_DIR$/.idea/phpunit.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/bsctool.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/bsctool.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -80,7 +77,7 @@
       <workItem from="1709863599128" duration="5989000" />
       <workItem from="1711595911685" duration="1814000" />
       <workItem from="1713928719735" duration="842000" />
-      <workItem from="1740137005396" duration="263000" />
+      <workItem from="1740137005396" duration="308000" />
     </task>
     <task id="LOCAL-00001" summary="增加nonce gasprice limit 设置">
       <created>1711597932442</created>
@@ -118,7 +115,15 @@
       <option name="project" value="LOCAL" />
       <updated>1740137055651</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="变更">
+      <option name="closed" value="true" />
+      <created>1740137275901</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1740137275901</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

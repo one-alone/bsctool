@@ -119,4 +119,54 @@ class Transactor
         return $cb->result;
     }
 
+    public function transactParam ($tx): string {
+        if (!isset($this->credential)) {
+            throw new Exception('credential not set');
+        }
+
+        $from = $this->credential->getAddress();
+
+        $tx['from'] = $from;
+
+        if (!isset($tx['nonce'])) {
+            $tx['nonce'] = $this->getTransactionCount($from);
+        }
+        if (!isset($tx['chainId'])) {
+            $chainId = $tx['chainId'] = $this->netVersion();
+        }
+        if (!isset($tx['value'])) {
+            if (isset($this->value)) {
+                $tx['value'] = $this->value;
+            } else {
+                $tx['value'] = '0x0';
+            }
+        }
+
+        if (!isset($tx['gasPrice'])) {
+            if (isset($this->gasPrice)) {
+                $tx['gasPrice'] = $this->gasPrice;
+            } else {
+                $tx['gasPrice'] = $this->estimateGasPrice();
+            }
+        }
+
+        if (!isset($tx['gasLimit'])) {
+            if (isset($this->gasLimit)) {
+                $tx['gasLimit'] = $this->gasLimit;
+            } else {
+                $tx['chainId'] = Utils::toHex($tx['chainId'], 1);
+                $tx['gasLimit'] = $this->estimateGasUsage($tx);
+            }
+        }
+        $tx['chainId'] = $chainId;
+        $stx = $this->credential->signTransaction($tx);
+
+        $cb = new Callback;
+
+        $this->web3->eth->sendRawTransaction($stx, $cb);
+
+        return ['tx_id'=>$cb->result,'param'=>$tx];
+    }
+
+
 }

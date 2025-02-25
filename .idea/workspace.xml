@@ -1,66 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba86332a-1d05-4b39-9699-dc93fcb33def" name="变更" comment="变更">
+    <list default="true" id="f8e3eaab-fe75-416b-a1af-72d23679fa2c" name="更改" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bscphp/src/Kit.php" beforeDir="false" afterPath="$PROJECT_DIR$/bscphp/src/Kit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bscphp/src/Transactor.php" beforeDir="false" afterPath="$PROJECT_DIR$/bscphp/src/Transactor.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;one-alone&quot;
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "one-alone"
   }
-}</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/one-alone/bsctool.git&quot;,
-    &quot;accountId&quot;: &quot;704bab2f-97c4-47db-91b5-dcb142abdeac&quot;
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/one-alone/bsctool.git",
+    "accountId": "704bab2f-97c4-47db-91b5-dcb142abdeac"
   }
-}</component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
-  </component>
-  <component name="PerforceDirect.Settings">
-    <option name="CHARSET" value="无" />
-  </component>
+}]]></component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="D:\laragon\bin\php\php-8.3.7-nts-Win32-vs16-x64\php.exe" />
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 8
-}</component>
-  <component name="ProjectId" id="2dO00yhsgGYTv1lENnk9BNe0akn" />
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 8
+}]]></component>
+  <component name="ProjectId" id="2tWiLdJb4fAnf1QKN7VhaM8woVv" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "D:/laragon/www/bsctool",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\laragon\www\bsctool" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -72,89 +68,16 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="默认任务">
-      <changelist id="ba86332a-1d05-4b39-9699-dc93fcb33def" name="变更" comment="" />
-      <created>1709863597894</created>
+      <changelist id="f8e3eaab-fe75-416b-a1af-72d23679fa2c" name="更改" comment="" />
+      <created>1740474176984</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1709863597894</updated>
-      <workItem from="1709863599128" duration="5989000" />
-      <workItem from="1711595911685" duration="1814000" />
-      <workItem from="1713928719735" duration="842000" />
-      <workItem from="1740137005396" duration="1061000" />
-      <workItem from="1740138393161" duration="2067000" />
+      <updated>1740474176984</updated>
+      <workItem from="1740474178084" duration="106000" />
     </task>
-    <task id="LOCAL-00001" summary="增加nonce gasprice limit 设置">
-      <created>1711597932442</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1711597932442</updated>
-    </task>
-    <task id="LOCAL-00002" summary="增加nonce gasprice limit 设置">
-      <created>1711599264210</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1711599264210</updated>
-    </task>
-    <task id="LOCAL-00003" summary="增加value 设置">
-      <created>1713928797950</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1713928797950</updated>
-    </task>
-    <task id="LOCAL-00004" summary="增加value 设置">
-      <created>1713929486283</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1713929486283</updated>
-    </task>
-    <task id="LOCAL-00005" summary="变更">
-      <option name="closed" value="true" />
-      <created>1740137055651</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1740137055651</updated>
-    </task>
-    <task id="LOCAL-00006" summary="变更">
-      <option name="closed" value="true" />
-      <created>1740137275901</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1740137275901</updated>
-    </task>
-    <task id="LOCAL-00007" summary="变更">
-      <option name="closed" value="true" />
-      <created>1740137317883</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1740137317883</updated>
-    </task>
-    <task id="LOCAL-00008" summary="变更">
-      <option name="closed" value="true" />
-      <created>1740139017103</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1740139017103</updated>
-    </task>
-    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="增加nonce gasprice limit 设置" />
-    <MESSAGE value="增加value 设置" />
-    <MESSAGE value="变更" />
-    <option name="LAST_COMMIT_MESSAGE" value="变更" />
   </component>
 </project>

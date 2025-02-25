@@ -30,6 +30,14 @@ class Kit{
         ];
         return $this->transactor->transact($tx);
     }
+    function transferParam($to, $value,$param){
+        $tx = [
+            'to' => $to,
+            'value' => $value
+        ];
+        $tx = array_merge($tx,$param);
+        return $this->transactor->transactParam($tx);
+    }
 
     //abi, bytecode, args...
     function deployContract(){

@@ -1,6 +1,6 @@
 {
     "name": "bscmain/bsc-php",
-    "description": "Binance Smart Chain PHP SDK，封装常用交易/合约调用/事件查询等功能",
+    "description": "Binance Smart Chain PHP SDK，封装常用交易/合约调用/事件查询等功能 ",
     "type": "library",
     "homepage": "https://github.com/one-alone/bsctool",
     "license": "MIT",

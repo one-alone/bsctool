@@ -4,7 +4,7 @@
     "type": "1",
 	"homepage": "https://github.com/one-alone/bsctool.git",
     "require": {
-        "sc0vu/web3.php": "^0.1.4",
+        "web3p/web3.php": "^0.1.4",
         "web3p/ethereum-tx": "^0.4.3"
     },
 	"license": "MIT",

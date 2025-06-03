@@ -161,7 +161,6 @@ class Transactor
     {
 
         list($numerator, $denominator) = $this->decimalToFraction($this->grade);
-        var_dump($numerator);
         // 把乘 1.5 转成 “乘 3 再除 2”
         $g = gmp_init($decStr, 10);
         $g3 = gmp_mul($g, $numerator);

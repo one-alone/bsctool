@@ -16,6 +16,7 @@ class SmartContract extends Contract
     protected $value;
     protected $nonce;
     protected $credential;
+    protected $grade = 1;
 
     protected $txMethods = [];
     protected $viewMethods = [];
@@ -39,6 +40,10 @@ class SmartContract extends Contract
         }
     }
 
+    public function setGrade ($num = 1) {
+        $this->grade = $num;
+        return $this;
+    }
     public function setGasPrice ($price) {
         if (!$price) {
             unset($this->gasPrice);
@@ -78,14 +83,16 @@ class SmartContract extends Contract
         return $this;
     }
 
-    protected function transact ($tx): string {
+    protected function transact ($tx) {
         if (!isset($this->credential)) {
             throw new \Exception('credential not set');
         }
         $transactor = new Transactor($this->web3, $this->credential);
         $tx['to'] = $this->getToAddress();
+        $transactor->setGrade($this->grade);
         return $transactor->transact($tx);
     }
+
 
     protected function isTxMethod ($name) {
         return in_array($name, $this->txMethods);

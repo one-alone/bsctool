@@ -162,48 +162,7 @@ class BscTool
         return $data;
     }
 
-    /**
-     * 转出
-     * @param $alice_sk  转出人私钥
-     * @param $toAddress 转出地址
-     * @param $num       转出数量
-     * @param $tokenAddr token地址
-     * @return string
-     * @throws Exception
-     * @author haiqing.lin
-     * @date   2021/7/28 0028
-     */
-    public static function transferParam($alice_sk, $toAddress, $num, $tokenAddr = '',$param = [], $net = '')
-    {
-        if (!$alice_sk) {
-            return BaseService::res('密钥缺失',1);
-        }
-        if (!$net) {
-            $net = self::myNet();
-        }
-        try {
-            $kit = new Kit(
-                NodeClient::create($net),
-                Credential::fromKey($alice_sk)
-            );
-            if ($tokenAddr) {
-                $kit = $kit->bep20($tokenAddr);
-            }
 
-            $res = $kit->transferParam(
-                $toAddress,
-                self::hex($num),
-                $param
-            );
-            return BaseService::res($res);
-        } catch (Throwable $e) {
-            return BaseService::res($e->getMessage(), 1);
-//            if ($e->getMessage() == 'invalid argument 0: json: cannot unmarshal hex string without 0x prefix into Go struct field TransactionArgs.chainId of type *hexutil.Big') {
-//                return self::transfer($alice_sk, $recipient, $num, $tokenAddr);
-//            }
-//            return ['code' => 1, 'msg' => $e->getMessage()];
-        }
-    }
 
     /**
      * 转出
@@ -232,12 +191,25 @@ class BscTool
             if ($tokenAddr) {
                 $kit = $kit->bep20($tokenAddr);
             }
-
-            $txid = $kit->transfer(
+            //设置gas费倍数 1.5倍合适
+          //  $kit->setGrade(1);
+            $res = $kit->transfer(
                 $toAddress,
                 self::hex($num)
+
             );
-            return BaseService::res($txid);
+            if(isset($res['param']['gasPrice'])){
+                $res['param']['gasPrice_10'] =bcdiv(EthTool::hex2str($res['param']['gasPrice']),pow(10, 18),18);
+            }
+            if(isset($res['param']['nonce'])){
+                $res['param']['nonce_10'] = EthTool::hex2str($res['param']['nonce']);
+            }
+            if(isset($res['param']['gasLimit'])){
+                if(!is_numeric($res['param']['gasLimit'])){
+                    $res['param']['gasLimit_10'] = EthTool::hex2str($res['param']['gasLimit']);
+                }
+            }
+            return BaseService::res($res);
         } catch (Throwable $e) {
             return BaseService::res($e->getMessage(), 1);
 //            if ($e->getMessage() == 'invalid argument 0: json: cannot unmarshal hex string without 0x prefix into Go struct field TransactionArgs.chainId of type *hexutil.Big') {

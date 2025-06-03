@@ -60,7 +60,7 @@ class BscTool
      * https://dataseed4.ninicoin.io/
      */
 
-    public static $_default_sk = '0xf2f42c0c55c65b4e374784c056e8df421ed933405e52fb97444bb06f';
+    public static $_default_sk = '0xf2f42c0c55c65b4e374784c05e8df21ed933405e52fb97444bb06f';
     public static $_net = 'https://binance.llamarpc.com';
 
     public static $_nets = [

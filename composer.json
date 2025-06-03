@@ -1,31 +1,39 @@
 {
     "name": "bscmain/bsc-php",
-    "description": "Binance Chain operation",
-    "type": "1",
-	"homepage": "https://github.com/one-alone/bsctool.git",
+    "description": "Binance Smart Chain PHP SDK，封装常用交易/合约调用/事件查询等功能",
+    "type": "library",
+    "homepage": "https://github.com/one-alone/bsctool",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "mr quan",
+            "email": "903838379@qq.com",
+            "homepage": "https://github.com/one-alone"
+        }
+    ],
+
     "require": {
+        "php": ">=7.4",
         "web3p/web3.php": "^0.1.4",
         "web3p/ethereum-tx": "^0.4.3"
     },
-	"license": "MIT",
-	 "authors": [
-        {
-            "name": "mr quan",
-            "email": "903838379@qq.com"
-        }
-    ],
-	 "require-dev": {
+
+    "require-dev": {
         "phpunit/phpunit": "~6.3"
     },
+
     "autoload": {
         "psr-4": {
-            "bsctool\\": "bscphp/src/"
+            "BscTool\\": "bscphp/src/"
         }
     },
-	"extra": {
+
+    "extra": {
         "branch-alias": {
-            "dev-master": "1.0.x-dev"
+            "dev-master": "1.0-dev"
         }
     },
-    "minimum-stability": "dev"
+
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
